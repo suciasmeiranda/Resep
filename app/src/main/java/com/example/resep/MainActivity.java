@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, new MenuFragment())
                     .commit();
-            bottomNav.setSelectedItemId(R.id.navigation_menu);
+            bottomNav.setSelectedItemId(R.id.navigation_home);
         }
     }
 }

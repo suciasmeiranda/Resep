@@ -36,6 +36,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Recipe recipe = recipes.get(position);
         holder.nameTextView.setText(recipe.getName());
+        holder.timeTextView.setText(recipe.getTime());
         holder.imageView.setImageResource(recipe.getImageResId());
         holder.itemView.setOnClickListener(v -> listener.onItemClick(recipe));
     }
@@ -48,11 +49,13 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView nameTextView;
+        TextView timeTextView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.recipeImage);
             nameTextView = itemView.findViewById(R.id.recipeName);
+            timeTextView = itemView.findViewById(R.id.recipeTime);
         }
     }
 }

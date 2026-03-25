@@ -24,10 +24,11 @@ public class MenuFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<Recipe> recipes = new ArrayList<>();
-        recipes.add(new Recipe("Nasi Goreng", "Nasi, Telur, Kecap, Bawang", "1. Tumis bawang\n2. Masukkan telur\n3. Masukkan nasi dan kecap", R.drawable.nasi_goreng));
-        recipes.add(new Recipe("Soto Ayam", "Ayam, Soun, Tauge, Kuah Kuning", "1. Rebus ayam\n2. Siapkan bumbu soto\n3. Sajikan dengan pelengkap", R.drawable.soto_ayam));
-        recipes.add(new Recipe("Nasi Kuning", "Beras, Santan, Kunyit", "1. Cuci beras\n2. Masak dengan santan dan kunyit\n3. Sajikan dengan lauk pauk", R.drawable.nasi_kuning));
-        recipes.add(new Recipe("Sop Daging", "Daging Sapi, Wortel, Kentang", "1. Rebus daging hingga empuk\n2. Masukkan sayuran\n3. Bumbui dan sajikan", R.drawable.sop_daging));
+        recipes.add(new Recipe("Nasi Goreng", "Nasi, Telur, Kecap, Bawang", "1. Tumis bawang\n2. Masukkan telur\n3. Masukkan nasi dan kecap", R.drawable.nasi_goreng, "15 menit"));
+        recipes.add(new Recipe("Mie Goreng", "Mie, Sayur, Bakso, Kecap", "1. Rebus mie\n2. Tumis bumbu dan bakso\n3. Masukkan mie dan aduk rata", R.drawable.nasi_goreng, "10 menit"));
+        recipes.add(new Recipe("Ayam Goreng", "Ayam, Lengkuas, Kunyit, Bawang", "1. Ungkep ayam dengan bumbu\n2. Goreng hingga kecokelatan", R.drawable.soto_ayam, "30 menit"));
+        recipes.add(new Recipe("Soto Ayam", "Ayam, Soun, Tauge, Kuah Kuning", "1. Rebus ayam\n2. Siapkan bumbu soto\n3. Sajikan dengan pelengkap", R.drawable.soto_ayam, "45 menit"));
+        recipes.add(new Recipe("Pisang Goreng", "Pisang, Tepung, Gula", "1. Campur adonan tepung\n2. Masukkan pisang\n3. Goreng hingga matang", R.drawable.nasi_kuning, "10 menit"));
 
         RecipeAdapter adapter = new RecipeAdapter(recipes, recipe -> {
             Intent intent = new Intent(getActivity(), DetailActivity.class);
